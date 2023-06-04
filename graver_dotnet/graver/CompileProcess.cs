@@ -106,10 +106,5 @@ namespace graver
             get { return flags; }
             set { flags = value; }
         }
-
-        private string GetDebuggerDisplay()
-        {
-            return ToString();
-        }
     }
 }
