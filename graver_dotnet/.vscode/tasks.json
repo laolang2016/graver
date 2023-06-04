@@ -51,17 +51,20 @@
             "command": "dotnet",
             "args": [
                 "test",
-                "--collect:\"Graver Code Coverage\""
+                "--collect:\"XPlat Code Coverage\""
             ],
             "dependsOn":[
                 "clean"
-            ]
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/graver.test"
+            }
         },{
             "label": "coverage",
             "type": "shell",
             "command": "reportgenerator",
             "args": [
-                "-reports:\"${workspaceFolder}/graver.test/TestResults/c30c56d4-0a1d-4f5c-820d-7768fd8bce14/coverage.cobertura.xml\"",
+                "-reports:\"**/coverage.cobertura.xml\"",
                 "-targetdir:\"./dist/coveragereport\"",
                 "-reporttypes:Html"
             ],
