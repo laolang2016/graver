@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graver", "graver\graver.csproj", "{5CC23228-98F3-4669-9798-A10728691BC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graver.test", "graver.test\graver.test.csproj", "{F7B98357-E760-46A2-96FC-5D2D73FA3DBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CC23228-98F3-4669-9798-A10728691BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CC23228-98F3-4669-9798-A10728691BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CC23228-98F3-4669-9798-A10728691BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CC23228-98F3-4669-9798-A10728691BC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7B98357-E760-46A2-96FC-5D2D73FA3DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7B98357-E760-46A2-96FC-5D2D73FA3DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7B98357-E760-46A2-96FC-5D2D73FA3DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7B98357-E760-46A2-96FC-5D2D73FA3DBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

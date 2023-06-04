@@ -1,0 +1,24 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+
+        "**/dist": true,
+        "**/graver/bin": true,
+        "**/graver/obj": true,
+        "**/graver.test/bin": true,
+        "**/graver.test/obj": true,
+        "**/graver.test/TestResults": true
+    },
+    "VsCodeTaskButtons.showCounter": true,
+    "VsCodeTaskButtons.tasks": [
+        {
+            "label": "$(debug-coverage) coverage",
+            "task": "coverage"
+        }
+    ]
+}

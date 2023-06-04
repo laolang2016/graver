@@ -1,0 +1,73 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/graver/graver.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/graver/graver.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/graver/graver.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command":"dotnet",
+            "args": [
+                "clean"
+            ]
+        },
+        {
+            "label": "test",
+            "type": "shell",
+            "command": "dotnet",
+            "args": [
+                "test",
+                "--collect:\"Graver Code Coverage\""
+            ],
+            "dependsOn":[
+                "clean"
+            ]
+        },{
+            "label": "coverage",
+            "type": "shell",
+            "command": "reportgenerator",
+            "args": [
+                "-reports:\"${workspaceFolder}/graver.test/TestResults/c30c56d4-0a1d-4f5c-820d-7768fd8bce14/coverage.cobertura.xml\"",
+                "-targetdir:\"./dist/coveragereport\"",
+                "-reporttypes:Html"
+            ],
+            "dependsOn":[
+                "test"
+            ]
+        }
+    ]
+}
