@@ -2,30 +2,24 @@ import { navbar } from "vuepress-theme-hope";
 
 export default navbar([
   "/",
-  "/portfolio",
-  "/demo/",
   {
-    text: "指南",
+    text: "起步与环境配置",
     icon: "lightbulb",
-    prefix: "/guide/",
+    prefix: "/setup/",
     children: [
       {
-        text: "Bar",
+        text: "vscode",
         icon: "lightbulb",
-        prefix: "bar/",
-        children: ["baz", { text: "...", icon: "ellipsis", link: "" }],
+        prefix: "vscode/",
+        children: ["a01_reference.md","a02_base_setting.md"],
       },
       {
-        text: "Foo",
+        text: "cmake",
         icon: "lightbulb",
-        prefix: "foo/",
-        children: ["ray", { text: "...", icon: "ellipsis", link: "" }],
+        prefix: "cmake/",
+        children: ["a01_reference.md","a02_hello.md"],
       },
     ],
   },
-  {
-    text: "V2 文档",
-    icon: "book",
-    link: "https://theme-hope.vuejs.press/zh/",
-  },
+  "/alex/",
 ]);

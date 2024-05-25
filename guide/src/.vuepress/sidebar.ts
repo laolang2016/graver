@@ -5,22 +5,35 @@ export default sidebar({
     "",
     "portfolio",
     {
-      text: "案例",
+      text: "起步与环境配置",
       icon: "laptop-code",
-      prefix: "demo/",
-      link: "demo/",
-      children: "structure",
+      prefix: "setup/",
+      link: "setup/",
+      // collapsible: true,
+      children: [
+        {
+          text: "vscode",
+          prefix: "vscode/",
+          link: "vscode/",
+          collapsible: true,
+          children: "structure",
+        },
+        {
+          text: "cmake",
+          prefix: "cmake/",
+          link: "cmake/",
+          collapsible: true,
+          children: "structure",
+        },
+      ],
     },
     {
-      text: "文档",
-      icon: "book",
-      prefix: "guide/",
+      text: "alex",
+      icon: "laptop-code",
+      prefix: "alex/",
+      link: "alex/",
+      // collapsible: true,
       children: "structure",
-    },
-    {
-      text: "幻灯片",
-      icon: "person-chalkboard",
-      link: "https://plugin-md-enhance.vuejs.press/zh/guide/content/revealjs/demo.html",
-    },
+    }
   ],
 });
