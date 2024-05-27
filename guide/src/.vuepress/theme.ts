@@ -2,6 +2,8 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
+
+
 export default hopeTheme({
   hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
 
@@ -40,6 +42,8 @@ export default hopeTheme({
     editLink: "在 GitHub 上编辑此页",
   },
 
+  headerDepth: 5,
+
   // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
   // hotReload: true,
 
@@ -56,7 +60,15 @@ export default hopeTheme({
 
     // 搜索
     searchPro: true,
-    
+
+    // 代码复制按钮
+    copyCode: true,
+
+    // 代码主题
+    prismjs:{
+      light: "coldark-cold"
+    },
+
     components: {
       components: ["Badge", "VPCard"],
     },

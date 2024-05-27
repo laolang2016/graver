@@ -14,8 +14,10 @@ index: false
 4. 有类似 `.vscode` 的项目级别配置能力
 5. 有类似 `vscode` 的 [便携模式](https://vscode.github.net.cn/docs/editor/portable) 的能力
 6. 定制或写自己的插件要容易
+7. 项目级别的插件启停配置
+8. 项目级别的快捷键配置
 
-考虑到效率问题, 目前暂时使用 `vscode` 是最优解
+出于易用性与配置速度考虑, 目前暂时使用 `vscode` 是最优解
 
 
 <Catalog />

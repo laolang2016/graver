@@ -32,7 +32,7 @@ export default sidebar({
       icon: "laptop-code",
       prefix: "alex/",
       link: "alex/",
-      // collapsible: true,
+      collapsible: true,
       children: "structure",
     }
   ],
