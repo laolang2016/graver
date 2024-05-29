@@ -21,5 +21,17 @@ export default navbar([
       },
     ],
   },
-  "/alex/",
+  {
+    text: "alex",
+    icon: "lightbulb",
+    prefix: "/alex/",
+    children: [
+      {
+        text: "part 1",
+        icon: "lightbulb",
+        prefix: "part01/",
+        children: ["a01_cmdline.md"],
+      }
+    ],
+  },
 ]);

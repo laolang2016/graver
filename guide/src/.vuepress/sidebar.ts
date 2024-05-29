@@ -9,7 +9,7 @@ export default sidebar({
       icon: "laptop-code",
       prefix: "setup/",
       link: "setup/",
-      // collapsible: true,
+      collapsible: true,
       children: [
         {
           text: "vscode",
@@ -33,7 +33,15 @@ export default sidebar({
       prefix: "alex/",
       link: "alex/",
       collapsible: true,
-      children: "structure",
+      children: [
+        {
+          text: "Part 1",
+          prefix: "part01/",
+          link: "part01/",
+          collapsible: true,
+          children: "structure",
+        }
+      ],
     }
   ],
 });
