@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <properties>
+        <property name="LOG_HOME">../logs/acwj-java8</property>
+        <property name="FILE_NAME">app</property>
+        <property name="jx.level">info</property>
+        <property name="pattern">%d{yyyy-MM-dd HH:mm:ss.SSS} [%5t] %-5level %c{1.} - %msg%n</property>
+        <!-- <property name="pattern">%d{yyyy-MM-dd HH:mm:ss.SSS} [%10t] %-5level %l - %msg%n</property> -->
+    </properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${pattern}"/>
+        </Console>
+
+        <RollingRandomAccessFile name="RollingRandomAccessFile" fileName="${LOG_HOME}/${FILE_NAME}.log"
+                                 filePattern="${LOG_HOME}/${date:yyyy-MM-dd}/${FILE_NAME}-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="${pattern}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingRandomAccessFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="${jx.level}">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingRandomAccessFile"/>
+        </Root>
+
+        <Logger name="com.laolang" level="${jx.level}" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="RollingRandomAccessFile"/>
+        </Logger>
+    </Loggers>
+</Configuration>
